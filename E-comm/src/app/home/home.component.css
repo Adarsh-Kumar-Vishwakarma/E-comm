@@ -1,0 +1,50 @@
+/* General styles */
+.image-box {
+  margin: 10px; /* Shorthand for margin */
+  background-color: white(0, 0, 0, 0);
+  padding: 10px; /* Add padding for better spacing */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+.product-header-image {
+  object-fit: contain;
+  width: 100%;
+  height: 600px;
+}
+
+.product-item {
+  margin-bottom: 20px; /* Reduce margin for tighter spacing */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Add rounded corners */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.product-item img {
+  width: 100%;
+  height: 200px; /* Adjust height for better image display */
+  object-fit: contain; /* Maintain aspect ratio while covering the entire container */
+}
+
+.product-item .product-details {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 15px; /* Adjust padding for better spacing */
+}
+
+.product-item .name-head {
+  font-size: 18px; /* Slightly reduce font size */
+  font-weight: bold; /* Use a more noticeable font weight */
+  margin-bottom: 5px; /* Add margin for better separation */
+}
+
+.product-item h6 {
+  margin-top: 5px; /* Add some spacing above the heading */
+  text-align: center;
+}
+
+.product-item .product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically */
+  padding: 5px 15px; /* Adjust padding for better spacing */
+}

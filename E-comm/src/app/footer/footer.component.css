@@ -1,0 +1,29 @@
+/* Reset margin and padding for ul elements */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for the footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+/* Styles for the ul inside the footer */
+.footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styles for links inside the footer */
+.footer ul li a {
+  color: blueviolet;
+  text-decoration: none;
+}

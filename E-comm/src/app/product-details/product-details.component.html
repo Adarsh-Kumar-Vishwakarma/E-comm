@@ -1,0 +1,52 @@
+<div class="row product-details" *ngIf="productData">
+    <div class="col-sm-6">
+       <img class="product-img" src="{{productData.image}}" alt="">
+    </div>
+    <div class="col-sm-6">
+        <div class="details">
+            <h1>{{productData.name}} </h1>
+            <h3>Price:<fa-icon [icon]="iconrupee" ></fa-icon> {{productData.price}} </h3>
+            <div>
+                <h5 class="product-color" [style.backgroundColor]="productData.color"></h5>
+                <span>Color: {{productData.color}} </span>
+                <h6>Category: {{productData.category}} </h6>
+                <h6>Description: {{productData.description}} </h6>
+                <button class="form-button buy-button">Buy Now</button>
+                <button *ngIf="removeCart" class="form-button remove-button" (click)="removeToCart(productData.id)">Remove from Cart</button>
+                <button *ngIf="!removeCart" class="form-button add-button" (click)="addToCart()">Add to Cart</button>
+                <div class="quantity-group">
+                    <button (click)="handleQuantity('minus')" class="minus-button">-</button>
+                    <input type="text" value="{{productQuantity}}" class="quantity-input" />
+                    <button (click)="handleQuantity('plus')" class="plus-button">+</button>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+<!-- <div class="row product-details">
+    <div class="col-sm-6">
+        <img class="product-img"
+            src="https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg" alt="Hp Laptop">
+    </div>
+    <div class="col-sm-6">
+        <div class="details">
+            <h1>Hp Laptop</h1>
+            <h3>Price: ₹ 40,000</h3>
+            <div>
+                <h5 class="product-color" style="background-color: #000;"></h5>
+                <span>Color: Black</span>
+                <h6>Category: Laptop</h6>
+                <h6>Description: Hp laptop for students and professionals</h6>
+                <button class="form-button buy-button">Buy Now</button>
+                <button class="form-button remove-button">Remove from Cart</button>
+                <button class="form-button add-button">Add to Cart</button>
+                <div class="quantity-group">
+                    <button (click)="handleQuantity('minus')" class="minus-button">-</button>
+                    <input type="text" value="{{productQuantity}}" class="quantity-input" />
+                    <button (click)="handleQuantity('plus')" class="plus-button">+</button>
+                </div>
+            </div>
+        </div>
+</div> -->

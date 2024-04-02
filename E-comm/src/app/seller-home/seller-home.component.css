@@ -1,0 +1,49 @@
+/* Default styling */
+h1 {
+    color: #e72929;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 20px;
+    opacity: 0.8;
+    font-size: 24px; /* Increased font size for better readability */
+}
+
+table {
+    text-align: center;
+    color: black;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+table td, table th {
+    border: 1px solid #e72929;
+    padding: 15px; /* Increased padding for better spacing */
+    min-width: 160px;
+}
+
+img {
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure images are responsive */
+    /* object-fit: contain;  */
+}
+
+.adjust-update-link {
+    margin-left: 20px; /* Reduced margin for better alignment */
+}
+
+.deleteIcon {
+    color: #e72929;
+    cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        margin-left: 20px; /* Adjusted margin for smaller screens */
+    }
+    
+    table td, table th {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+}

@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* .container{
+    margin-left: 5%;
+    margin-right: 5%;
+} */
+
+body {
+    font-family: "Quicksand", sans-serif;
+}
+
+.common-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+.form-input {
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid #e72929;
+    padding-left: 15px;
+    color: #e72929;
+}
+
+.form-button {
+    height: 35px;
+    border: 1px solid #e72929;
+    color: #e72929;
+    cursor: pointer;
+}
+
+.error-p {
+    color: red;
+}
+
+.message-p {
+    color: green;
+    text-align: center;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.3); /* Transparent black background */
+    border-color: transparent; /* Set border color to transparent */
+    border: none !important; /*  Remove border and ensure it's not overridden */
+    border-radius: 10px;
+    color: white; /* Text color */
+     padding: 0% /* Add padding for better readability */
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    border-radius: 5px;
+    color: white; /* Icon color */
+}
+
+.carousel-control-next-icon:before,
+.carousel-control-prev-icon:before {
+    color: white; /* Arrow color */
+}
+
+.invalid-input {
+    color: red;
+    font-size: 12px;
+    margin-top: -20px
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+.max-width {
+    width: 100%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

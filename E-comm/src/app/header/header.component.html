@@ -1,0 +1,39 @@
+<nav class="nav">
+    <h1><a routerLink="/">E-Comm</a></h1>
+    <div *ngIf="menuType!=='seller'" class="nav-search">
+        <input type="text" #searchInput  (keyup)="searchProducts($event)" (blur)="hideSearch()"
+            placeholder="Search Products" />
+        <button (click)="submitSearch(searchInput.value)">Search</button>
+        <ul class="suggested-result" *ngIf="searchResult">
+            <li *ngFor="let item of searchResult">
+                <a (mousedown)="redirectToDetails(item.id)">
+                    {{item.name}}
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div [ngSwitch]="menuType">
+        <ul *ngSwitchCase="'default'">
+            <li><a routerLink="/"><fa-icon [icon]="iconHome"></fa-icon> Home</a></li>
+            <li><a routerLink="/seller-auth"><fa-icon [icon]="iconLogin"></fa-icon> Seller Login</a></li>
+            <li><a routerLink="/user-auth"><fa-icon [icon]="iconLogin"></fa-icon> Login</a></li>
+            <li><a routerLink="/user-auth"><fa-icon [icon]="iconCart"></fa-icon> Cart({{cartItems}})</a></li>
+        </ul>
+        <ul *ngSwitchCase="'user'">
+            <li><a routerLink="/"><fa-icon [icon]="iconHome"></fa-icon> Home</a></li>
+            <!-- <li><a routerLink="/seller-auth"><fa-icon [icon]="iconLogin"></fa-icon> Seller</a></li> -->
+            <li><a (click)="userLogout()"><fa-icon [icon]="iconLogout"></fa-icon> Logout</a></li>
+            <li><a [routerLink]="cartItems>0?'cart-page':null"><fa-icon [icon]="iconCart"></fa-icon> Cart({{cartItems}})</a></li>
+            <li><a routerLink="/my-order"><fa-icon [icon]="iconOrder"></fa-icon> Orders</a></li>
+            <li><a href=""><fa-icon [icon]="iconProfile"></fa-icon> {{ userName | titlecase }}</a></li>
+        </ul>
+        <ul *ngSwitchCase="'seller'">
+            <li><a routerLink="/"><fa-icon [icon]="iconHome"></fa-icon> Home</a></li>
+            <li><a routerLink="/seller-add-product"><fa-icon [icon]="iconAdd"></fa-icon> Add Product</a></li>
+            <li><a routerLink="/seller-home"><fa-icon [icon]="iconList"></fa-icon> Product List</a></li>
+            <li><a (click)="logout()"><fa-icon [icon]="iconLogout"></fa-icon> Logout</a></li>
+            <li><a href=""><fa-icon [icon]="iconProfile"></fa-icon> {{ sellerName | titlecase }}</a></li>
+        </ul>
+    </div>
+</nav>

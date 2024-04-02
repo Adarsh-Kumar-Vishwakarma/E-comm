@@ -1,0 +1,32 @@
+<div class="row search-item" *ngFor="let items of searchResult">
+    <div class="col-sm-3">
+        <a routerLink="/details/{{items.id}}">
+            <img src={{items.image}} alt="">
+        </a>
+    </div>
+    <div class="col-sm-8 details">
+        <a routerLink="/details/{{items.id}}">
+            <h6>{{items.name}} </h6>
+        </a>    
+            <p><b>Price: {{items.price|currency}} </b></p>
+            <p><span>Color: {{items.color}} </span><span>Category: {{items.category}} </span></p>
+            <p>{{items.description}} </p>
+       
+    </div>
+</div>
+<!-- <div class="row search-item">
+    <div class="col-sm-3">
+        <a routerLink="/details/1">
+            <img src="https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg" alt="">
+        </a>
+    </div>
+    <div class="col-sm-8 details">
+        <a routerLink="/details/1">
+            <h6>Hp Laptop</h6>
+        </a>   
+            <p><b>Price: ₹ 40000</b></p>
+            <p><span>Color: Black </span><span>Category: Laptop </span></p>
+            <p>Hp laptop for student and professionals</p>
+       
+    </div>
+</div> -->

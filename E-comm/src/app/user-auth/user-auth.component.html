@@ -1,0 +1,28 @@
+<div *ngIf="!showLogin" class="user-auth">
+    <h1>User Sign-up</h1>
+    <form #userSignup="ngForm" (ngSubmit)="signUp(userSignup.value)" class="common-form">
+        <input type="text" ngModel name="name" placeholder="Enter name" />
+        <input type="text" ngModel name="email" placeholder="Enter email" #email="ngModel" required email />
+        <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please enter a vaild email </span></p>
+        <input type="password" ngModel name="password" placeholder="Enter password" #password="ngModel" required
+            minlength="2" maxlength="10" />
+        <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Password lenght should be min 2 and max 10</span></p>
+        <button [disabled]="userSignup.invalid">SignUp</button>
+        <p>Already have account? <a class="auth-toggle-link" (click)="openLogin()">Click for Login</a></p>
+    </form>
+</div>
+
+<div *ngIf="showLogin" class="user-auth">
+    <h1>User Login</h1>
+    <p class="error-p">{{authError}}</p>
+    <form #userLogin="ngForm" (ngSubmit)="login(userLogin.value)" class="common-form">
+        <input type="text" ngModel name="email" placeholder="Enter email" #email="ngModel" required email />
+        <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please enter a vaild email </span></p>
+        <input type="password" ngModel name="password" placeholder="Enter password" #password="ngModel" required
+            minlength="2" maxlength="10" />
+        <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please enter a correct
+                password</span></p>
+        <button [disabled]="userLogin.invalid">Login</button>
+        <p>Don't have account? <a class="auth-toggle-link" (click)="openSignUp()">Click for sign-up</a></p>
+    </form>
+</div>

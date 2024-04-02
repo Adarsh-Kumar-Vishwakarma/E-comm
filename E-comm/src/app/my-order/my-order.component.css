@@ -1,0 +1,50 @@
+.my-orders {
+    margin-bottom: 100px;
+}
+
+.my-orders h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    color: #e72929;
+    opacity: .8;
+    flex-wrap: wrap;
+}
+
+.my-orders .order-img {
+    width: 100px;
+    display: block;
+    margin: 0 auto; 
+}
+
+.my-orders .row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-orders .col-sm-2 {
+    flex: 1;
+    text-align: center;
+}
+
+.my-orders .form-button {
+    border-radius: 1rem;
+    border: none;
+    padding: .4rem;
+    color: #fff;
+    background-color: #e72929;
+    opacity: .7;
+    outline: none;
+    transition: opacity 0.3s ease;
+}
+
+.my-orders .form-button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
