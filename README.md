@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## JSON Server
 
+This project required a JSON Sever first install server then run project 
+
 To start JSON Server enter this command in terminal (json-server --watch db.json --port 3000)
 
 ## Development server
