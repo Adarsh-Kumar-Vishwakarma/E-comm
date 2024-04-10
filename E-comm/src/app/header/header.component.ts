@@ -51,7 +51,7 @@ export class HeaderComponent implements OnInit {
           }
           this.menuType = 'seller';
         } else if (userAuth) {
-          const userData = JSON.parse(userAuth)[0];
+          const userData = JSON.parse(userAuth);
           if (userData && userData.name) {
             this.userName = userData.name;
           }
